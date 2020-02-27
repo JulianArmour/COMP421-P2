@@ -1,8 +1,8 @@
 --patrons that do not have oustanding loans
-
+-- patrons that can make a reservation (finebalance = 0)
 select librarycardno
 from patron
-    except
+except
 select librarycardno
 from loan
 where returndate is null;
